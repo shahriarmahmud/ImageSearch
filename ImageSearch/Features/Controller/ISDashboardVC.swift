@@ -37,6 +37,7 @@ class ISDashboardVC: UIViewController {
         activityLoaderView.isHidden = true
         photoListCollectionView.prefetchDataSource = self
         cellWidth = (view.frame.size.width - 30) / 2
+        view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:))))
     }
     
     private func getData(searchTxt: String, page: Int){
